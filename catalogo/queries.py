@@ -35,3 +35,4 @@ def top_n_libros_mas_prestados(n: int):
     return Libro.objects.annotate(
         total_prestamos=Count("prestamo")
     ).order_by("-total_prestamos")[:n]
+    
